@@ -1,4 +1,7 @@
-<img width="287" height="202" alt="image" src="https://github.com/user-attachments/assets/4ab9c99a-74a7-4224-b6ca-530f4a0fcd5f" />
+<div align="center">
+  <img width="287" height="202" alt="image" src="https://github.com/user-attachments/assets/4ab9c99a-74a7-4224-b6ca-530f4a0fcd5f" />
+</div>
+
 
 
 - **Prepared by: Annie**
