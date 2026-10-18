@@ -1,5 +1,5 @@
-**Prepared by: Annie** /
-**Dataset: Hotel Booking**
+- **Prepared by: Annie**
+- **Dataset: Hotel Booking**
 
 ## Project Overview
 This analysis explores hotel booking patterns using integrated data to uncover a comprehensive view of guest behavior and operational performance.
