@@ -1,3 +1,5 @@
+<img width="367" height="205" alt="image" src="https://github.com/user-attachments/assets/71376827-31ac-415c-b259-f4ef00e8262b" />
+
 - **Prepared by: Annie**
 - **Dataset used: Hotel Booking**
 
