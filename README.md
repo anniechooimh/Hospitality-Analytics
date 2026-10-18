@@ -1,3 +1,5 @@
+**Prepared by: Annie**
+
 ## Project Overview
 This analysis explores hotel booking patterns using integrated data to uncover a comprehensive view of guest behavior and operational performance.
 
