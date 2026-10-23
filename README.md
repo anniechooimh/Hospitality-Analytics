@@ -20,6 +20,7 @@ How can hotels leverage on booking, customer, market segment, and reservation st
 > Examine booking trends across months, hotel types, and length of stay to understand factors affecting hotel occupancy.
 3. Evaluate Customer Segments
 > Compare different customer groups to identify the most valuable and profitable customer segments based on booking behavior and revenue contribution.
-4. Identify occupancy trends across Resort Hotels vs. City Hotels by analyzing arrival dates, stay duration, and booking patterns.
-5. Evaluate distribution channels (Direct, Corporate, TA/TO, GDS) in terms of booking volume, cancellations, and revenue contribution to guide marketing spend.
-6. Study reservation statuses (Check-Out, Canceled, No-Show) to identify risk factors for no-shows and cancellations, and recommend preventive measures.
+4. Assess Distribution Channel Performance
+> Analyze booking channels (Direct, Corporate, TA/TO, Online Travel Agents) to determine which channels generate the highest bookings, revenue, and lowest cancellation rates.
+5. Examine Reservation Outcomes
+> Analyze factors associated with reservation statuses such as Check-Out, Canceled, and No-Show to improve booking management decisions.
