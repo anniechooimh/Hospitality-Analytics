@@ -31,39 +31,84 @@ How can hospitality booking data be leveraged to identify the key factors influe
 ## Dataset information
 ### Dataset Overview
 The project uses 5 dataset csv files:
-<div align="left">
-<img width="782" height="151" alt="image" src="https://github.com/user-attachments/assets/7522947f-487e-4ed6-bed6-2ab0834fb85d" />
-</div>
+| Filename | Description | Records |
+| :--- | :--- | :--- 
+| Bookings.csv | Main booking transaction dataset | 119,390 |
+| Hotels.csv | Hotel type information | 2 |
+| Customer Types.csv | Customer, deposit, and meal information | Lookup Table |
+| Market Segments.csv | Market segment and distribution channel information | Lookup Table |
+| Reservation Status.csv | Reservation outcome information | Lookup Table |
 
 ### Data Dictionary
 **Bookings Table Description:**
-<div align="left">
-<img width="924" height="726" alt="image" src="https://github.com/user-attachments/assets/8b0b1dc8-4258-4f70-8faf-79355a2cfaf0" />
-</div>
+| Column Name | Data Type | Description | Example Value |
+| :--- | :--- | :--- | :--- |
+| Booking_ID | Integer | Unique identifier assigned to each booking record. |   |
+| Hotel_ID | Integer | Identifier of the hotel associated with the booking. |   |
+| Market_Segment_ID	| Integer	| Identifier of the booking market segment and distribution channel. |   |
+| Customer_Type_ID	| Integer	| Identifier of the customer classification, deposit type, and meal plan. |   |
+| Reservation_ID | Integer | Identifier of the reservation status. |   |
+| is_canceled |	Boolean |	Indicates whether the booking was canceled. |   |
+| lead_time	| Integer |	Number of days between booking creation and arrival date. |   |
+| arrival_date_year	| Integer |	Year of guest arrival. |   |
+| arrival_date_month | Category |	Month of guest arrival. |   |
+| arrival_date_week_number | Integer | Week number of guest arrival. |   |
+| arrival_date_day_of_month |	Integer |	Day of the month of guest arrival. |   |
+| stays_in_weekend_nights	| Integer |	Number of weekend nights booked. |   |
+| stays_in_week_nights | Integer | Number of weekday nights booked. |   |
+| adults | Integer | Number of adult guests included in the booking. |   |
+| children | Integer | Number of child guests included in the booking. |   |
+| babies | Integer | Number of babies included in the booking. |   |
+| country	| Category | Country of origin of the guest. |   |
+| is_repeated_guest | Boolean | Indicates whether the guest has booked previously. |   |
+| previous_cancellations | Integer | Number of previous canceled bookings by the guest. |   |
+| previous_bookings_not_canceled | Integer | Number of previous completed bookings by the guest. |   |
+| booking_changes | Integer | Number of modifications made to the booking. |   |
+| agent	| Category | Travel agent identifier associated with the booking. |   |
+| company |	Category | Company identifier associated with the booking. |   |
+| days_in_waiting_list | Integer | Number of days the booking remained on a waiting list. |   |
+| adr |	Float	| Average Daily Rate charged for the booking. |   |
+| required_car_parking_spaces | Integer |	Number of parking spaces requested by the guest. |   |
+| total_of_special_requests	| Integer | Number of special requests submitted by the guest. |   |
+| reservation_status_date	| Date | Date on which the reservation status was recorded. |   |
 
 
 **Hotels Table Description:**
-<div align="left">
-<img width="924" height="76" alt="image" src="https://github.com/user-attachments/assets/c21550b1-a657-4d6c-8ecd-2d644eb4a754" />
-</div>
+| Column Name | Data Type | Description | Example Value |
+| :--- | :--- | :--- | :--- |
+| Booking_ID | Integer | Unique identifier assigned to each booking record. |   |
 
 
 **Market Segments Table Description:**
-<div align="left">
-<img width="924" height="101" alt="image" src="https://github.com/user-attachments/assets/759e76af-1559-40c0-9c88-fd9d35bec2bf" />
-</div>
+| Column Name | Data Type | Description | Example Value |
+| :--- | :--- | :--- | :--- |
+| Booking_ID | Integer | Unique identifier assigned to each booking record. |   |
 
 
 **Customer Types Table Description:**
-<div align="left">
-<img width="924" height="126" alt="image" src="https://github.com/user-attachments/assets/00b9c179-223d-418c-98df-d510b0d02102" />
-</div>
+| Column Name | Data Type | Description | Example Value |
+| :--- | :--- | :--- | :--- |
+| Booking_ID | Integer | Unique identifier assigned to each booking record. |   |
 
 
 **Reservation Status Table Description:**
-<div align="left">
-<img width="924" height="76" alt="image" src="https://github.com/user-attachments/assets/5b5bd92c-aedd-4218-83d2-c951eed82869" />
-</div>
+| Column Name | Data Type | Description | Example Value |
+| :--- | :--- | :--- | :--- |
+| Booking_ID | Integer | Unique identifier assigned to each booking record. |   |
+
+
+
+Derived Features
+
+The new features you created during data preparation.
+
+Feature Engineering
+Feature	Formula	Descriptionarrival_date	Year + Month + Day	Full arrival date
+total_nights	Weekend Nights + Week Nights	Total stay duration
+total_guests	Adults + Children + Babies	Total number of guests
+total_price	ADR × Total Nights	Estimated booking value
+lead_time_category	Grouped Lead Time	Booking lead time bands
+
 
 
 ## PowerBI Dashboard
