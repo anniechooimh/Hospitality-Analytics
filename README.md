@@ -1,8 +1,6 @@
 <div align="center">
-  <img width="371" height="226" alt="image" src="https://github.com/user-attachments/assets/246d6ab1-f86d-4f4c-988e-788652ebe258" />
+  <img width="280" height="280" alt="image" src="https://github.com/user-attachments/assets/e499fbdc-0d58-494c-bf5b-49639b006afd" />
 </div>
-
-
 
 - **Prepared by: Annie**
 - **Dataset used: Hotel Booking**
