@@ -24,3 +24,8 @@ How can hotels leverage on booking, customer, market segment, and reservation st
 > Analyze booking channels (Direct, Corporate, TA/TO, Online Travel Agents) to determine which channels generate the highest bookings, revenue, and lowest cancellation rates.
 5. Examine Reservation Outcomes
 > Analyze factors associated with reservation statuses such as Check-Out, Canceled, and No-Show to improve booking management decisions.
+
+##
+<img width="1335" height="755" alt="image" src="https://github.com/user-attachments/assets/aa052f56-a0b9-49ef-8be9-9c6df77ed495" />
+
+
