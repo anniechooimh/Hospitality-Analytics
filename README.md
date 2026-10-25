@@ -28,9 +28,42 @@ How can hospitality booking data be leveraged to identify the key factors influe
 5. Examine Reservation Outcomes
 > Analyze factors associated with reservation statuses such as Check-Out, Canceled, and No-Show to improve booking management decisions.
 
-## Dataset Overview
-The project uses 5 dataset csv files: Booking.csv, Customer Types.csv, Hotels.csv, Market Segments.csv and Reservation.csv
+## Dataset information
+### Dataset Overview
+The project uses 5 dataset csv files:
+<div align="left">
+<img width="782" height="151" alt="image" src="https://github.com/user-attachments/assets/7522947f-487e-4ed6-bed6-2ab0834fb85d" />
+</div>
 
+### Data Dictionary
+**Bookings Table Description:**
+<div align="left">
+<img width="924" height="726" alt="image" src="https://github.com/user-attachments/assets/8b0b1dc8-4258-4f70-8faf-79355a2cfaf0" />
+</div>
+
+
+**Hotels Table Description:**
+<div align="left">
+<img width="924" height="76" alt="image" src="https://github.com/user-attachments/assets/c21550b1-a657-4d6c-8ecd-2d644eb4a754" />
+</div>
+
+
+**Market Segments Table Description:**
+<div align="left">
+<img width="924" height="101" alt="image" src="https://github.com/user-attachments/assets/759e76af-1559-40c0-9c88-fd9d35bec2bf" />
+</div>
+
+
+**Customer Types Table Description:**
+<div align="left">
+<img width="924" height="126" alt="image" src="https://github.com/user-attachments/assets/00b9c179-223d-418c-98df-d510b0d02102" />
+</div>
+
+
+**Reservation Status Table Description:**
+<div align="left">
+<img width="924" height="76" alt="image" src="https://github.com/user-attachments/assets/5b5bd92c-aedd-4218-83d2-c951eed82869" />
+</div>
 
 
 ## PowerBI Dashboard
