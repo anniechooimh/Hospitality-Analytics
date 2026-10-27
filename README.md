@@ -43,58 +43,65 @@ The project uses 5 dataset csv files:
 **Bookings Table Description:**
 | Column Name | Data Type | Description | Example Value |
 | :--- | :--- | :--- | :--- |
-| Booking_ID | Integer | Unique identifier assigned to each booking record. |   |
-| Hotel_ID | Integer | Identifier of the hotel associated with the booking. |   |
-| Market_Segment_ID	| Integer	| Identifier of the booking market segment and distribution channel. |   |
-| Customer_Type_ID	| Integer	| Identifier of the customer classification, deposit type, and meal plan. |   |
-| Reservation_ID | Integer | Identifier of the reservation status. |   |
-| is_canceled |	Boolean |	Indicates whether the booking was canceled. |   |
-| lead_time	| Integer |	Number of days between booking creation and arrival date. |   |
-| arrival_date_year	| Integer |	Year of guest arrival. |   |
-| arrival_date_month | Category |	Month of guest arrival. |   |
-| arrival_date_week_number | Integer | Week number of guest arrival. |   |
-| arrival_date_day_of_month |	Integer |	Day of the month of guest arrival. |   |
-| stays_in_weekend_nights	| Integer |	Number of weekend nights booked. |   |
-| stays_in_week_nights | Integer | Number of weekday nights booked. |   |
-| adults | Integer | Number of adult guests included in the booking. |   |
-| children | Integer | Number of child guests included in the booking. |   |
-| babies | Integer | Number of babies included in the booking. |   |
-| country	| Category | Country of origin of the guest. |   |
-| is_repeated_guest | Boolean | Indicates whether the guest has booked previously. |   |
-| previous_cancellations | Integer | Number of previous canceled bookings by the guest. |   |
-| previous_bookings_not_canceled | Integer | Number of previous completed bookings by the guest. |   |
-| booking_changes | Integer | Number of modifications made to the booking. |   |
-| agent	| Category | Travel agent identifier associated with the booking. |   |
-| company |	Category | Company identifier associated with the booking. |   |
-| days_in_waiting_list | Integer | Number of days the booking remained on a waiting list. |   |
-| adr |	Float	| Average Daily Rate charged for the booking. |   |
-| required_car_parking_spaces | Integer |	Number of parking spaces requested by the guest. |   |
-| total_of_special_requests	| Integer | Number of special requests submitted by the guest. |   |
-| reservation_status_date	| Date | Date on which the reservation status was recorded. |   |
+| Booking_ID | Integer | Unique identifier assigned to each booking record. | 18  |
+| Hotel_ID | Integer | Identifier of the hotel associated with the booking. | 1 |
+| Market_Segment_ID	| Integer	| Identifier of the booking market segment and distribution channel. | 4 |
+| Customer_Type_ID	| Integer	| Identifier of the customer classification, deposit type, and meal plan. | 4 |
+| Reservation_ID | Integer | Identifier of the reservation status. | 1 |
+| is_canceled |	Boolean |	Indicates whether the booking was canceled. | 0 |
+| lead_time	| Integer |	Number of days between booking creation and arrival date. | 37 |
+| arrival_date_year	| Integer |	Year of guest arrival. | 2015 |
+| arrival_date_month | Category |	Month of guest arrival. | July |
+| arrival_date_week_number | Integer | Week number of guest arrival. | 27 |
+| arrival_date_day_of_month |	Integer |	Day of the month of guest arrival. | 1 |
+| stays_in_weekend_nights	| Integer |	Number of weekend nights booked. | 0 |
+| stays_in_week_nights | Integer | Number of weekday nights booked. | 4 |
+| adults | Integer | Number of adult guests included in the booking. | 2 |
+| children | Integer | Number of child guests included in the booking. | 0 |
+| babies | Integer | Number of babies included in the booking. | 0 |
+| country	| Category | Country of origin of the guest. | PRT |
+| is_repeated_guest | Boolean | Indicates whether the guest has booked previously. | 0 |
+| previous_cancellations | Integer | Number of previous canceled bookings by the guest. | 0 |
+| previous_bookings_not_canceled | Integer | Number of previous completed bookings by the guest. | 0 |
+| booking_changes | Integer | Number of modifications made to the booking. | 0 |
+| agent	| Category | Travel agent identifier associated with the booking. | 8 |
+| company |	Category | Company identifier associated with the booking. | 110 |
+| days_in_waiting_list | Integer | Number of days the booking remained on a waiting list. | 0 |
+| adr |	Float	| Average Daily Rate charged for the booking. | 97.5 |
+| required_car_parking_spaces | Integer |	Number of parking spaces requested by the guest. | 0 |
+| total_of_special_requests	| Integer | Number of special requests submitted by the guest. | 0 |
+| reservation_status_date	| Date | Date on which the reservation status was recorded. | 5/7/2015 |
 
 
 **Hotels Table Description:**
 | Column Name | Data Type | Description | Example Value |
 | :--- | :--- | :--- | :--- |
-| Booking_ID | Integer | Unique identifier assigned to each booking record. |   |
+| Hotel_ID | Integer | Unique identifier assigned to a hotel. | 1 |
+| hotel | Text | Name or category of the hotel. | Resort Hotel |
 
 
 **Market Segments Table Description:**
 | Column Name | Data Type | Description | Example Value |
 | :--- | :--- | :--- | :--- |
-| Booking_ID | Integer | Unique identifier assigned to each booking record. |   |
+| Market_Segment_ID | Integer | Unique identifier assigned to a market segment record. | 8 |
+| market_segment | Category | Market segment through which the booking was acquired. | Groups |
+| distribution_channel | Category | Distribution channel used to make the booking. | Corporate |
 
 
 **Customer Types Table Description:**
 | Column Name | Data Type | Description | Example Value |
 | :--- | :--- | :--- | :--- |
-| Booking_ID | Integer | Unique identifier assigned to each booking record. |   |
+| Customer_Type_ID | Integer | Unique identifier assigned to a customer type record. | 4 |
+| customer_type | Category | Classification of the customer booking behavior. | Contract |
+| deposit_type | Category | Deposit policy applied to the booking. | No Deposit |
+| meal | Category | Meal package selected for the booking. | BB |
 
 
 **Reservation Status Table Description:**
 | Column Name | Data Type | Description | Example Value |
 | :--- | :--- | :--- | :--- |
-| Booking_ID | Integer | Unique identifier assigned to each booking record. |   |
+| Reservation_ID | Integer | Unique identifier assigned to a reservation status. | 3 |
+| reservation_status | Category | Final status of the reservation. | No-Show |
 
 
 
