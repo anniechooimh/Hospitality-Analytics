@@ -29,6 +29,15 @@ How can hospitality booking data be leveraged to identify the key factors influe
 5. Examine Reservation Outcomes
 > Analyze factors associated with reservation statuses such as Check-Out, Canceled, and No-Show to improve booking management decisions.
 
+## Repository Contents
+| File | Description |
+| :--- | :---
+| Capstone_Hospitality Analysis.ipynb |	Load and clean dataset; Generated both descriptive and predictive analysis |
+| Bookings.csv, Hotels.csv, Customer Types.csv, Market Segments.csv, Reservation Status.csv | Raw datasets |
+| bookings_clean.csv | Cleaned dataset produced using the notebook |
+| Hotel Booking Dashboard.pbix | Power BI dashboard |
+| ?!? | Project report and presentation |
+
 ## Dataset information
 ### Dataset Overview
 The project uses 5 dataset csv files:
