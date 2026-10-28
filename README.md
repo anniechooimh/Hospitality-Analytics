@@ -104,10 +104,18 @@ The project uses 5 dataset csv files:
 | reservation_status | Category | Final status of the reservation. | No-Show |
 
 
-
-Derived Features
-
-The new features you created during data preparation.
+**Data Cleaning & Transformation**
+The following preprocessing steps were performed in Python prior to analysis and visualization:
+| Column Name | Original Type | Updated Type | Action Taken |
+| :--- | :--- | :--- | :--- |
+| is_canceled |	int64 |	Boolean	| Converted 0/1 to Boolean values |
+| is_repeated_guest	| int64 |	Boolean	| Converted 0/1 to Boolean values |
+| children	| float64 |	int64 |	Filled missing values with 0 |
+| agent	| float64 |	Int64	| Filled missing values with 0 (No Agent) |
+| company |	float64 |	Int64 |	Filled missing values with 0 (No Company) |
+| country	| object	| object |	Missing values replaced with 'Unknown' |
+| reservation_status_date |	object	| datetime |	Converted to date format |
+| arrival_date	| Derived |	datetime |	Created from year, month, and day fields |
 
 Feature Engineering
 Feature	Formula	Descriptionarrival_date	Year + Month + Day	Full arrival date
