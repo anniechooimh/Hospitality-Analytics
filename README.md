@@ -136,7 +136,7 @@ The following preprocessing steps were performed in Python prior to analysis and
 - DAX measures created for Average ADR, Average Stay Length, Booking Count, Cancellation Rate, Occupancy Rate, Total Bookings and Total Revenue.
 
 ## PowerBI Dashboard
-<img width="1335" height="755" alt="image" src="https://github.com/user-attachments/assets/aa052f56-a0b9-49ef-8be9-9c6df77ed495" />
+<img width="1447" height="812" alt="image" src="https://github.com/user-attachments/assets/7360f0dc-15b7-4715-bea6-17248154b1fd" />
 
 ##
 
