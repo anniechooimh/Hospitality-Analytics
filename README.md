@@ -7,6 +7,7 @@ Hospitality Analytics using Python and Power BI to uncover booking trends, custo
 
 - **Prepared by: Annie Chooi**
 - **Dataset used: Hotel Booking**
+- **Link to Jupyter Notebook in Google Colab: https://github.com/anniechooimh/Hospitality-Analytics**
 
 ## Project Overview
 The hospitality industry faces ongoing challenges in managing booking cancellations, maximizing occupancy rates, improving customer retention, and optimizing revenue generation. Hotel managers require data-driven insights to better understand customer behavior, booking patterns, and channel performance in order to support strategic decision-making. This analysis explores the hotel booking patterns using past data to uncover a comprehensive view of guest behavior and operational performance. 
@@ -108,25 +109,19 @@ The project uses 5 dataset csv files:
 
 The following preprocessing steps were performed in Python prior to analysis and visualization:
 
-a) Treatment to missing values:
-| Column Name | Missing count | Action Taken | Reason |
-| :--- | :--- | :--- | :--- |
-| children | 4 | Filled with '0' | In hotel booking data, a missing value usually indicates no children were included in the reservation. |
-| country | 488 | Filled with 'Unknown' | The missing rate is small (0.41%), not dropping these rolls can avoid data loss. |
-| agent | 16,340 | Filled with '0' (No Agent) | Missing values are common because not all bookings are made via an agent. |
-| company | 112,593 | Filled with '0' (No Company) | Missing values are common because not all bookings are made via a company. |
-
-b) 
 | Column Name | Original Type | Updated Type | Action Taken |
 | :--- | :--- | :--- | :--- |
-| is_canceled |	int64 |	Boolean	| Converted 0/1 to Boolean values |
-| is_repeated_guest	| int64 |	Boolean	| Converted 0/1 to Boolean values |
 | children	| float64 |	int64 |	Filled missing values with 0 |
 | agent	| float64 |	Int64	| Filled missing values with 0 (No Agent) |
 | company |	float64 |	Int64 |	Filled missing values with 0 (No Company) |
 | country	| object	| object |	Missing values replaced with 'Unknown' |
 | reservation_status_date |	object	| datetime |	Converted to date format |
-| arrival_date	| Derived |	datetime |	Created from year, month, and day fields |
+| is_canceled |	int64 |	Boolean	| Converted 0/1 to Boolean values |
+| is_repeated_guest	| int64 |	Boolean	| Converted 0/1 to Boolean values |
+| arrival_date	| Derived |	datetime |	Created from year, month, and day of month fields |
+| total_nights |	Derived |	int64	| Total stay duration created from Weekend Nights + Week Nights	|
+| total_price |	Derived | float64 | Estimated booking value created from ADR × Total Nights |
+
 
 **Additional Power BI Transformations**
 
@@ -134,12 +129,6 @@ The following preprocessing steps were performed in PowerBI prior to creating vi
 | Column Name | Original Type | Updated Type | Action Taken |
 | :--- | :--- | :--- | :--- |
 | 
-Feature Engineering
-Feature	Formula	Descriptionarrival_date	Year + Month + Day	Full arrival date
-total_nights	Weekend Nights + Week Nights	Total stay duration
-total_guests	Adults + Children + Babies	Total number of guests
-total_price	ADR × Total Nights	Estimated booking value
-lead_time_category	Grouped Lead Time	Booking lead time bands
 
 
 
