@@ -122,17 +122,12 @@ The following preprocessing steps were performed in Python prior to analysis and
 | total_nights |	Derived |	int64	| Total stay duration created from Weekend Nights + Week Nights	|
 | total_price |	Derived | float64 | Estimated booking value created from ADR × Total Nights |
 
-
 **Additional Power BI Transformations**
-
-The following preprocessing steps were performed in PowerBI prior to creating visualisation for dashboard:
-| Column Name | Original Type | Updated Type | Action Taken |
-| :--- | :--- | :--- | :--- |
-| 
-
-
+- Lead Time Category created for segmentation analysis
+- DAX measures created for Average ADR, Average Stay Length, Booking Count, Cancellation Rate, Occupancy Rate, Total Bookings and Total Revenue.
 
 ## PowerBI Dashboard
 <img width="1335" height="755" alt="image" src="https://github.com/user-attachments/assets/aa052f56-a0b9-49ef-8be9-9c6df77ed495" />
 
+##
 
