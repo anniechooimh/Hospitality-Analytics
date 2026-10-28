@@ -105,7 +105,18 @@ The project uses 5 dataset csv files:
 
 
 **Data Cleaning & Transformation**
+
 The following preprocessing steps were performed in Python prior to analysis and visualization:
+
+a) Treatment to missing values:
+| Column Name | Missing count | Action Taken | Reason |
+| :--- | :--- | :--- | :--- |
+| children | 4 | Filled with '0' | In hotel booking data, a missing value usually indicates no children were included in the reservation. |
+| country | 488 | Filled with 'Unknown' | The missing rate is small (0.41%), not dropping these rolls can avoid data loss. |
+| agent | 16,340 | Filled with '0' (No Agent) | Missing values are common because not all bookings are made via an agent. |
+| company | 112,593 | Filled with '0' (No Company) | Missing values are common because not all bookings are made via a company. |
+
+b) 
 | Column Name | Original Type | Updated Type | Action Taken |
 | :--- | :--- | :--- | :--- |
 | is_canceled |	int64 |	Boolean	| Converted 0/1 to Boolean values |
@@ -117,6 +128,12 @@ The following preprocessing steps were performed in Python prior to analysis and
 | reservation_status_date |	object	| datetime |	Converted to date format |
 | arrival_date	| Derived |	datetime |	Created from year, month, and day fields |
 
+**Additional Power BI Transformations**
+
+The following preprocessing steps were performed in PowerBI prior to creating visualisation for dashboard:
+| Column Name | Original Type | Updated Type | Action Taken |
+| :--- | :--- | :--- | :--- |
+| 
 Feature Engineering
 Feature	Formula	Descriptionarrival_date	Year + Month + Day	Full arrival date
 total_nights	Weekend Nights + Week Nights	Total stay duration
