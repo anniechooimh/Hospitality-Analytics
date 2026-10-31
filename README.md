@@ -123,7 +123,7 @@ The following preprocessing steps were performed in Python prior to analysis and
 | children	| float64 |	int64 |	Filled missing values with 0 |
 | agent	| float64 |	Int64	| Filled missing values with 0 (No Agent) |
 | company |	float64 |	Int64 |	Filled missing values with 0 (No Company) |
-| country	| object	| object |	Missing values replaced with 'Unknown' |
+| country	| object	| object |	Replaced missing values with 'Unknown' |
 | reservation_status_date |	object	| datetime |	Converted to date format |
 | is_canceled |	int64 |	Boolean	| Converted 0/1 to Boolean values |
 | is_repeated_guest	| int64 |	Boolean	| Converted 0/1 to Boolean values |
