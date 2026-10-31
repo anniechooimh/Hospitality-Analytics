@@ -104,7 +104,7 @@ The project uses 5 dataset csv files:
 | Customer_Type_ID | Integer | Unique identifier assigned to a customer type record. | 4 |
 | customer_type | Category | Classification of the customer booking behavior. | Contract |
 | deposit_type | Category | Deposit policy applied to the booking. | No Deposit |
-| meal | Category | Meal package selected for the booking. | BB |
+| meal | Category | Meal package selected for the booking. | BB (Bed & Breakfast) |
 
 
 **Reservation Status Table Description:**
