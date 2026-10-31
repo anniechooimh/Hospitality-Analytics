@@ -44,10 +44,10 @@ The project uses 5 dataset csv files:
 | Filename | Description | Records |
 | :--- | :--- | :--- 
 | Bookings.csv | Main booking transaction dataset | 119,390 |
-| Hotels.csv | Hotel type information | 2 |
-| Customer Types.csv | Customer, deposit, and meal information | Lookup Table |
-| Market Segments.csv | Market segment and distribution channel information | Lookup Table |
-| Reservation Status.csv | Reservation outcome information | Lookup Table |
+| Hotels.csv | Hotel type information | 2 (Lookup Table) |
+| Customer Types.csv | Customer, deposit, and meal information | 36 (Lookup Table) |
+| Market Segments.csv | Market segment and distribution channel information | 26 (Lookup Table) |
+| Reservation Status.csv | Reservation outcome information | 3 (Lookup Table) |
 
 ### Data Dictionary
 **Bookings Table Description:**
