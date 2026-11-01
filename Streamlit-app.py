@@ -1,0 +1,40 @@
+import streamlit as st
+import joblib
+import numpy as np
+import pandas as pd
+
+# Load the saved sales regression model
+@st.cache_resource
+def load_model():
+    return joblib.load('salesregression.pkl')
+
+model = load_model()
+
+st.title("🤖 Booking Cancellation ML Predictor")
+
+# Input fields
+val1 = st.text_input("Lead_time", value=0.0)
+val2 = st.text_input("Total_nights", value=0.0)
+val3 = st.text_input("Customer_type", value=0.0)
+val4 = st.number_input("Market_segment", value=0.0)
+val5 = st.number_input("ADR", value=0.0)
+val6 = st.number_input("Deposit_type", value=0.0)
+
+if st.button("Predict"):
+    # 1. Arrange inputs into a dictionary mapping to your exact original dataset column names
+    input_dict = {
+        "Customer_type": [val1],
+        "Market_segment": [val2],
+        "Lead_time": [val3],
+        "Total_nights": [val4],
+        "ADR": [val5],
+        "Deposit_type": [val6]
+    }
+
+    # 2. Convert the dictionary into a pandas DataFrame
+    input_df = pd.DataFrame(input_dict)
+
+    # 3. Pass the DataFrame to the model instead of the numpy array
+    prediction = model.predict(input_df)
+
+    st.success(f"Prediction: {prediction[0]}")
