@@ -36,7 +36,7 @@ How can hospitality booking data be leveraged to identify the key factors influe
 | Bookings.csv, Hotels.csv, Customer Types.csv, Market Segments.csv, Reservation Status.csv | Raw datasets |
 | bookings_clean.csv | Cleaned dataset produced using the notebook |
 | Hotel Booking Dashboard.pbix | Power BI dashboard |
-| ?!? | Project report and presentation |
+| Presentation Slides_Annie Chooi.pdf | Project report and presentation slides |
 
 ## Dataset information
 ### Dataset Overview
