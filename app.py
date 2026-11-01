@@ -23,10 +23,10 @@ val6 = st.text_input("Deposit_type", value='Non Refund')
 if st.button("Predict"):
     # 1. Arrange inputs into a dictionary mapping to your exact original dataset column names
     input_dict = {
-        "Customer_type": [val1],
-        "Market_segment": [val2],
-        "Lead_time": [val3],
-        "Total_nights": [val4],
+        "Lead_time": [val1],
+        "Total_nights": [val2],
+        "Customer_type": [val3],
+        "Market_segment": [val4],
         "ADR": [val5],
         "Deposit_type": [val6]
     }
