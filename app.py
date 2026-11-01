@@ -13,12 +13,12 @@ model = load_model()
 st.title("🤖 Booking Cancellation ML Predictor")
 
 # Input fields
-val1 = st.number_input("Lead_time", value=0.0)
-val2 = st.number_input("Total_nights", value=0.0)
-val3 = st.text_input("Customer_type", value=0.0)
-val4 = st.text_input("Market_segment", value=0.0)
-val5 = st.number_input("ADR", value=0.0)
-val6 = st.text_input("Deposit_type", value=0.0)
+val1 = st.number_input("Lead_time", value=90)
+val2 = st.number_input("Total_nights", value=3)
+val3 = st.text_input("Customer_type", value='Group')
+val4 = st.text_input("Market_segment", value='Online TA')
+val5 = st.number_input("ADR", value=100)
+val6 = st.text_input("Deposit_type", value='Non Refund')
 
 if st.button("Predict"):
     # 1. Arrange inputs into a dictionary mapping to your exact original dataset column names
