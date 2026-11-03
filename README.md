@@ -146,7 +146,7 @@ This Power BI dashboard consolidates all major KPIs into a single management vie
 
 <img width="1325" height="741" alt="image" src="https://github.com/user-attachments/assets/10ece4c2-5bdd-4434-bac2-1fb683a49f11" />
 
-## Key Findings
+## Key Insights
 ### 1. Cancellation Drivers
 - Lead time strongly influences cancellation risk. Bookings made within 30 days had an 18.56% cancellation rate, while bookings made more than 365 days in advance reached 67.66%. This suggests booking commitment decreases as the reservation horizon grows.
 - Transient customers showed the highest cancellation rate at 40.75%, while Group bookings had the lowest at 10.23%.
@@ -169,6 +169,6 @@ This Power BI dashboard consolidates all major KPIs into a single management vie
 - Conversely, Check-Out reservations represent the majority of bookings (75,166) and record the highest average number of special requests (0.71 per booking), indicating that guests who engage more with the hotel prior to arrival are more likely to complete their stays.
 - No-Show bookings remain relatively low (1,207 bookings) and are characterized by shorter lead times and moderate request levels.
 
-##
+## Business Recommendations
 
 
