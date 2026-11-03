@@ -9,13 +9,22 @@ Hospitality Analytics using Python and Power BI to uncover booking trends, custo
 - **Dataset used: Hotel Booking**
 - **Link to Jupyter Notebook in Google Colab: https://github.com/anniechooimh/Hospitality-Analytics**
 
+## Repository Contents
+| File | Description |
+| :--- | :---
+| Capstone_Hospitality Analysis.ipynb |	Load and clean dataset; Generated both descriptive and predictive analysis |
+| Bookings.csv, Hotels.csv, Customer Types.csv, Market Segments.csv, Reservation Status.csv | Raw datasets |
+| bookings_clean.csv | Cleaned dataset produced using the notebook |
+| Hotel Booking Dashboard.pbix | Power BI dashboard |
+| Presentation Slides_Annie Chooi.pdf | Project report and presentation slides |
+
 ## Project Overview
 The hospitality industry faces ongoing challenges in managing booking cancellations, maximizing occupancy rates, improving customer retention, and optimizing revenue generation. Hotel managers require data-driven insights to better understand customer behavior, booking patterns, and channel performance in order to support strategic decision-making. This analysis explores the hotel booking patterns using past data to uncover a comprehensive view of guest behavior and operational performance. 
 
 The project combines Python for data cleaning, exploratory data analysis (EDA), and machine learning, together with Power BI for interactive dashboard development and storytelling.
 
 ## Business Problem
-How can hospitality booking data be leveraged to identify the key factors influencing booking cancellations, occupancy patterns, customer value, distribution channel effectiveness, and reservation outcomes in order to support data-driven decision-making and improve hotel performance?
+How can historical booking data be leveraged to improve hotel performance, reduce cancellations, optimize occupancy, and identify high-value customer segments?
 
 ## Research Objectives
 1. Identify the Main Factors Influencing Booking Cancellations
@@ -29,25 +38,22 @@ How can hospitality booking data be leveraged to identify the key factors influe
 5. Examine Reservation Outcomes
 > Analyze factors associated with reservation statuses such as Check-Out, Canceled, and No-Show to improve booking management decisions.
 
-## Repository Contents
-| File | Description |
-| :--- | :---
-| Capstone_Hospitality Analysis.ipynb |	Load and clean dataset; Generated both descriptive and predictive analysis |
-| Bookings.csv, Hotels.csv, Customer Types.csv, Market Segments.csv, Reservation Status.csv | Raw datasets |
-| bookings_clean.csv | Cleaned dataset produced using the notebook |
-| Hotel Booking Dashboard.pbix | Power BI dashboard |
-| Presentation Slides_Annie Chooi.pdf | Project report and presentation slides |
-
 ## Dataset information
-### Dataset Overview
-The project uses 5 dataset csv files:
+The analysis is based on five CSV datasets consisting of:
 | Filename | Description | Records |
 | :--- | :--- | :--- 
 | Bookings.csv | Main booking transaction dataset | 119,390 |
-| Hotels.csv | Hotel type (City Hotel & Resort Hotel) | 2 (Lookup Table) |
+| Hotels.csv | Hotel type | 2 (Lookup Table) |
 | Customer Types.csv | Customer, deposit, and meal information | 36 (Lookup Table) |
 | Market Segments.csv | Market segment and distribution channel information | 26 (Lookup Table) |
 | Reservation Status.csv | Reservation outcome information | 3 (Lookup Table) |
+
+### Dataset Size
+- Total Records: 119,390
+- Analysis Period: July 2015 – August 2017
+- Hotel Types:
+     - City Hotel
+     - Resort Hotel
 
 ### Data Dictionary
 **Bookings Table Description:**
@@ -114,9 +120,8 @@ The project uses 5 dataset csv files:
 | reservation_status | Category | Final status of the reservation. | No-Show |
 
 
-**Data Cleaning & Transformation**
-
-The following preprocessing steps were performed in Python prior to analysis and visualization:
+## Data Cleaning & Preparation
+Following preprocessing steps were performed in Python:
 
 | Column Name | Original Type | Updated Type | Action Taken |
 | :--- | :--- | :--- | :--- |
@@ -131,9 +136,33 @@ The following preprocessing steps were performed in Python prior to analysis and
 | total_nights |	Derived |	int64	| Total stay duration created from Weekend Nights + Week Nights	|
 | total_price |	Derived | float64 | Estimated booking value created from ADR × Total Nights |
 
-**Additional Power BI Transformations**
+Created additional analytical fields in Power BI:
 - Lead Time Category created for segmentation analysis
 - DAX measures created for Average ADR, Average Stay Length, Booking Count, Cancellation Rate, Occupancy Rate, Total Bookings and Total Revenue.
+
+## Data Model
+The bookings dataset was merged with:
+- Customer Type
+- Market Segment
+- Reservation Status
+- Hotel Type
+to create a centralized analytical dataset.
+
+## Exploratory Data Analysis
+The analysis focused on five key business areas:
+
+**1. Cancellation Analysis**
+Investigated cancellation behavior across: Lead Time, Customer Type, Deposit Type and Distribution Channel
+  
+**Key Findings**
+- Cancellation rates increase significantly with longer lead times.
+- Transient customers exhibited the highest cancellation rate.
+- OTA/TA/TO channels generated the highest booking volume but also the highest cancellation rate.
+- Deposit type showed strong influence on cancellation behavior.
+
+Business Impact: High cancellation rates reduce occupancy predictability and revenue realization.
+
+2.
 
 ## PowerBI Dashboard
 This Power BI dashboard consolidates all major KPIs into a single management view. Executives can monitor:
@@ -168,6 +197,36 @@ This Power BI dashboard consolidates all major KPIs into a single management vie
 - Reservation outcomes are strongly associated with lead time and the number of special requests. Cancelled bookings have the longest average lead time of 147.3 days, nearly twice that of completed stays (79.9 days), suggesting that reservations made further in advance are more susceptible to cancellation.
 - Conversely, Check-Out reservations represent the majority of bookings (75,166) and record the highest average number of special requests (0.71 per booking), indicating that guests who engage more with the hotel prior to arrival are more likely to complete their stays.
 - No-Show bookings remain relatively low (1,207 bookings) and are characterized by shorter lead times and moderate request levels.
+
+## Predictive Analytics: Random Forest Classifier
+### Objective
+
+A predictive machine learning model was developed to determine whether an upcoming hotel booking is likely to be cancelled. The model supports proactive decision-making by identifying reservations with a higher risk of cancellation, enabling hotels to improve occupancy management, revenue forecasting, and customer engagement strategies.
+
+- Target (y): is_canceled (0 = Not Cancelled, 1 = Cancelled)
+- Features (X): lead_time, adr, total_nights, customer_type, market_segment, deposit_type
+- Excluded: Booking identifiers and target-related fields to prevent data leakage
+- Preprocessing: Categorical variables (customer_type, market_segment, deposit_type) were one-hot encoded using pd.get_dummies() with drop_first=True
+- Model: Random Forest Classifier (n_estimators=100, max_depth=15, random_state=42)
+- Split: 80/20 stratified train-test split (95,512 training records, 23,878 testing records)
+
+| Metric | Score |
+| :--- | :--- |
+| Accuracy | 0.784 |
+| Precision |	0.881 |
+| Recall | 0.483 |
+| F1-Score | 0.624 |
+| AUC-ROC |	0.863 |
+
+The model achieved 78.4% accuracy and an AUC-ROC of 0.863, indicating strong ability to distinguish between cancelled and non-cancelled bookings. The high precision (88.1%) suggests that when the model predicts a cancellation, it is usually correct, making it suitable for proactive retention and occupancy management initiatives.
+
+<img width="1201" height="435" alt="image" src="https://github.com/user-attachments/assets/88edc677-1e65-4e08-aef6-08799e37b614" />
+
+The model correctly identified 14,456 non-cancelled bookings and 4,275 cancelled bookings. Although some cancellations were missed, the relatively low number of false positives (577) demonstrates strong reliability when flagging bookings as likely to cancel.
+
+The ROC curve shows that the model performs substantially better than random classification (AUC = 0.50). An AUC of 0.863 indicates strong predictive capability and confirms that booking characteristics contain meaningful signals for cancellation risk prediction.
+
+Overall, the Random Forest model provides a practical decision-support tool that complements the dashboard's descriptive analysis by helping management anticipate future booking cancellations and take proactive action.
 
 ## Business Recommendations
 Based on the analysis of booking behavior, cancellations, customer segments, distribution channels, and occupancy patterns, the following strategic recommendations are proposed:
