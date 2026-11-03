@@ -136,7 +136,39 @@ The following preprocessing steps were performed in Python prior to analysis and
 - DAX measures created for Average ADR, Average Stay Length, Booking Count, Cancellation Rate, Occupancy Rate, Total Bookings and Total Revenue.
 
 ## PowerBI Dashboard
+This Power BI dashboard consolidates all major KPIs into a single management view. Executives can monitor:
+- Bookings
+- Revenue
+- Occupancy
+- Cancellation trends
+- Customer performance
+- Distribution channel performance
+
 <img width="1325" height="741" alt="image" src="https://github.com/user-attachments/assets/10ece4c2-5bdd-4434-bac2-1fb683a49f11" />
 
+## Key Findings
+### 1. Cancellation Drivers
+- Lead time strongly influences cancellation risk. Bookings made within 30 days had an 18.56% cancellation rate, while bookings made more than 365 days in advance reached 67.66%. This suggests booking commitment decreases as the reservation horizon grows.
+- Transient customers showed the highest cancellation rate at 40.75%, while Group bookings had the lowest at 10.23%.
+3. Although No Deposit bookings account for the largest share of total cancellations, likely due to their high booking volume, a deposit-type-level analysis reveals that approximately 99% of Non-Refund bookings were cancelled, highlighting deposit type as a significant factor associated with cancellation behavior.
+   
+### 2. Occupancy Patterns
+- City Hotels consistently outperformed Resort Hotels in completed bookings. The peak month for City Hotels was May 2017 with 2,339 completed bookings, while Resort Hotels peaked at 1,417 bookings in October 2016.
+- Majority of completed bookings are short stays of 1 to 4 nights, especially for City Hotels, while Resort Hotels show a relatively higher proportion of longer stays, suggesting differing guest travel behaviors and occupancy patterns between the two hotel types.
+
+### 3. Customer Segment Evaluation
+- Customer segment analysis reveals that Transient customers are the most valuable segment, contributing approximately $19.33 million in revenue and generating the highest Average Daily Rate (ADR) of $104.78. However, this segment also records the highest cancellation rate at 40.75%, indicating a trade-off between revenue generation and booking reliability.
+- On the other hand, Contract and Group customers contribute less revenue but demonstrate greater booking stability and lower cancellation rates, making them potentially valuable for occupancy planning and demand forecasting.
+
+### 4. Distribution Channel Performance
+- TA/TO (Travel Agents/Tour Operators) channel is the dominant distribution channel, generating 57,718 completed bookings and $20.81 million in revenue. However, it also records a relatively high cancellation rate at 41.03%.
+- In contrast, the Direct channel demonstrates the strongest overall performance, combining substantial revenue generation of $4.33 million with the lowest cancellation rate at 17.46%, indicating that direct bookings are both more reliable and more valuable for hotel profitability.
+
+### 5. Reservation Outcomes
+- Reservation outcomes are strongly associated with lead time and the number of special requests. Cancelled bookings have the longest average lead time of 147.3 days, nearly twice that of completed stays (79.9 days), suggesting that reservations made further in advance are more susceptible to cancellation.
+- Conversely, Check-Out reservations represent the majority of bookings (75,166) and record the highest average number of special requests (0.71 per booking), indicating that guests who engage more with the hotel prior to arrival are more likely to complete their stays.
+- No-Show bookings remain relatively low (1,207 bookings) and are characterized by shorter lead times and moderate request levels.
+
 ##
+
 
