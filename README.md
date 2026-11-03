@@ -170,5 +170,36 @@ This Power BI dashboard consolidates all major KPIs into a single management vie
 - No-Show bookings remain relatively low (1,207 bookings) and are characterized by shorter lead times and moderate request levels.
 
 ## Business Recommendations
+Based on the analysis of booking behavior, cancellations, customer segments, distribution channels, and occupancy patterns, the following strategic recommendations are proposed:
+
+###1. Implement Risk-Tiered Booking Controls
+Focus on high-risk bookings, particularly long lead-time reservations, Transient customers, and OTA/TA/TO channels. Introduce deposit requirements, booking guarantees, automated reminder communications, and reconfirmation processes to reduce cancellation risk and improve booking reliability.
+
+Success Metrics: Cancellation rate by risk tier.
+
+###2. Expand Direct Booking Conversion Programs
+Increase direct booking share by targeting repeat and engaged guests through loyalty benefits, exclusive member offers, post-stay promotions, and direct rebooking incentives. This can reduce dependency on third-party channels and improve booking retention.
+
+Success Metrics: Direct booking share and direct booking cancellation rate.
+
+###3. Develop a Seasonal Occupancy Management Strategy
+Leverage seasonal demand patterns to optimize staffing, room inventory allocation, pricing strategies, minimum-stay policies, and promotional packages. Tailor approaches according to the differing demand profiles of City Hotels and Resort Hotels.
+
+Success Metrics: Occupancy rate, Average Daily Rate (ADR), and average stay length.
+
+###4. Strengthen Pre-Arrival Guest Engagement
+Increase guest interaction before arrival through preference collection, personalized communications, and service prompts. Greater guest engagement can improve commitment to reservations and enhance the overall guest experience.
+
+Success Metrics: Guest request rate and stay completion rate.
+
+###Expected Business Outcomes
+- Reduced booking cancellations
+- Improved occupancy utilization
+- Increased revenue quality and booking reliability
+- Higher proportion of direct bookings
+- Better operational and workforce planning
+- Enhanced guest engagement and retention
+
+This recommendation framework enables hotel management to shift focus from simply generating bookings to maximizing completed stays, revenue realization, and long-term customer value.
 
 
