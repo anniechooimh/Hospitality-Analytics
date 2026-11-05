@@ -9,15 +9,6 @@ Hospitality Analytics using Python and Power BI to uncover booking trends, custo
 - **Dataset used: Hotel Booking**
 - **Link to Jupyter Notebook in Google Colab: https://github.com/anniechooimh/Hospitality-Analytics**
 
-## Repository Contents
-| File | Description |
-| :--- | :---
-| Capstone_Hospitality Analysis.ipynb |	Load and clean dataset; Generated both descriptive and predictive analysis |
-| Bookings.csv, Hotels.csv, Customer Types.csv, Market Segments.csv, Reservation Status.csv | Raw datasets |
-| bookings_clean.csv | Cleaned dataset produced using the notebook |
-| Hotel Booking Dashboard.pbix | Power BI dashboard |
-| Presentation Slides_Annie Chooi.pdf | Project report and presentation slides |
-
 ## Project Overview
 The hospitality industry faces ongoing challenges in managing booking cancellations, maximizing occupancy rates, improving customer retention, and optimizing revenue generation. Hotel managers require data-driven insights to better understand customer behavior, booking patterns, and channel performance in order to support strategic decision-making. This analysis explores the hotel booking patterns using past data to uncover a comprehensive view of guest behavior and operational performance. 
 
@@ -152,9 +143,10 @@ to create a centralized analytical dataset.
 The analysis focused on five key business areas:
 
 **1. Cancellation Analysis**
-Investigated cancellation behavior across: Lead Time, Customer Type, Deposit Type and Distribution Channel
+
+Investigated cancellation behavior across: Lead Time, Customer Type, Deposit Type and Distribution Channel.
   
-**Key Findings**
+Key Findings: 
 - Cancellation rates increase significantly with longer lead times.
 - Transient customers exhibited the highest cancellation rate.
 - OTA/TA/TO channels generated the highest booking volume but also the highest cancellation rate.
@@ -162,20 +154,77 @@ Investigated cancellation behavior across: Lead Time, Customer Type, Deposit Typ
 
 Business Impact: High cancellation rates reduce occupancy predictability and revenue realization.
 
-2.
+**2. Occupancy Pattern Analysis**
+
+Analyzed occupancy trends by: Hotel Type, Month and Stay Duration.
+
+Key Findings
+- City Hotels achieved higher occupancy levels than Resort Hotels.
+- Peak demand periods occurred during May and August.
+- Resort Hotels attracted longer average stays.
+
+Business Impact: Understanding seasonality supports workforce planning, pricing optimization, and inventory management.
+
+**3. Customer Segment Evaluation**
+Customer performance was evaluated using: Booking Volume, Revenue Contribution, Average Daily Rate (ADR) and Cancellation Rate.
+
+Key Findings
+- Transient customers generated the highest revenue contribution.
+- Group bookings demonstrated lower cancellation rates.
+- Customer value and booking reliability varied significantly across segments.
+
+Business Impact: Revenue growth opportunities exist within high-value customer segments while managing cancellation risk.
+
+**4. Distribution Channel Performance**
+Channel effectiveness was evaluated across: Direct, TA/TO, Corporate and Groups
+
+Key Findings
+- TA/TO channels delivered the highest booking volumes.
+- Direct bookings recorded the lowest cancellation rates.
+- Direct channels provided the most reliable revenue source.
+
+Business Impact: Reducing dependency on third-party channels can improve booking quality and profitability.
+
+**5. Reservation Outcome Analysis**
+Compared: Completed Stays and Cancelled Reservations
+
+Key Findings
+- Cancelled reservations exhibited significantly longer lead times.
+- Guests who completed stays submitted more special requests.
+- Guest engagement appears to correlate with stay completion.
+
+Business Impact: Pre-arrival engagement initiatives may reduce cancellation risk and improve customer experience.
+
 
 ## PowerBI Dashboard
-This Power BI dashboard consolidates all major KPIs into a single management view. Executives can monitor:
-- Bookings
+An interactive management dashboard was developed in Power BI to monitor hotel performance.
+
+**Executive KPIs**
+- Total Bookings
+- Completed Stays
 - Revenue
-- Occupancy
-- Cancellation trends
-- Customer performance
-- Distribution channel performance
+- Occupancy Rate
+- Cancellation Rate
 
-<img width="1325" height="741" alt="image" src="https://github.com/user-attachments/assets/10ece4c2-5bdd-4434-bac2-1fb683a49f11" />
+**Interactive Filters**
+- Hotel Type
+- Customer Type
+- Market Segment
+- Reservation Status
+- Arrival Date
 
-## Key Insights
+**Visualizations**
+- Monthly Occupancy Trends
+- Revenue Analysis
+- Cancellation Analysis
+- Customer Segment Performance
+- Distribution Channel Performance
+- Reservation Outcome Analysis
+
+<img width="1441" height="806" alt="image" src="https://github.com/user-attachments/assets/7cafea6b-461c-4c08-a445-9eba38c916ef" />
+
+
+## Key Business Insights
 ### 1. Cancellation Drivers
 - Lead time strongly influences cancellation risk. Bookings made within 30 days had an 18.56% cancellation rate, while bookings made more than 365 days in advance reached 67.66%. This suggests booking commitment decreases as the reservation horizon grows.
 - Transient customers showed the highest cancellation rate at 40.75%, while Group bookings had the lowest at 10.23%.
@@ -265,5 +314,28 @@ Success Metrics: Guest request rate and stay completion rate.
 - Enhanced guest engagement and retention
 
 This recommendation framework enables hotel management to shift focus from simply generating bookings to maximizing completed stays, revenue realization, and long-term customer value.
+
+
+## Tools & Technologies
+| Tool | Purpose |
+| :--- | :--- |
+| Python | Data cleaning, transformation, EDA |
+| Pandas | Data manipulation |
+| NumPy |	Numerical calculations |
+| Matplotlib | Data visualization |
+| Seaborn | Statistical visualization |
+| Power BI | Dashboard development |
+| Excel |	Data validation and review |
+| GitHub | Project documentation and version control |
+
+
+## Repository Contents
+| File | Description |
+| :--- | :---
+| Capstone_Hospitality Analysis.ipynb |	Load and clean dataset; Generated both descriptive and predictive analysis |
+| Bookings.csv, Hotels.csv, Customer Types.csv, Market Segments.csv, Reservation Status.csv | Raw datasets |
+| bookings_clean.csv | Cleaned dataset produced using the notebook |
+| Hotel Booking Dashboard.pbix | Power BI dashboard |
+| Presentation Slides_Annie Chooi.pdf | Project report and presentation slides |
 
 
