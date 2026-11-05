@@ -8,6 +8,7 @@ Hospitality Analytics using Python and Power BI to uncover booking trends, custo
 - **Prepared by: Annie Chooi**
 - **Dataset used: Hotel Booking**
 - **Link to Jupyter Notebook in Google Colab: https://github.com/anniechooimh/Hospitality-Analytics**
+- **Link to Streamlit app: https://hospitality-analytics-yrxxgnbddqsbj27stgruxv.streamlit.app/**
 
 ## Project Overview
 The hospitality industry faces ongoing challenges in managing booking cancellations, maximizing occupancy rates, improving customer retention, and optimizing revenue generation. Hotel managers require data-driven insights to better understand customer behavior, booking patterns, and channel performance in order to support strategic decision-making. This analysis explores the hotel booking patterns using past data to uncover a comprehensive view of guest behavior and operational performance. 
