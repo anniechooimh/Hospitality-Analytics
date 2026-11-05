@@ -121,7 +121,5 @@ else:
             "Cancellation Probability",
             f"{probability:.2%}"
             )
-        except:
-            st.info(
-                "Prediction probability is not available for this model."
-                )
+    except:
+        st.info("Prediction probability is not available for this model.")
