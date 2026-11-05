@@ -339,3 +339,5 @@ This recommendation framework enables hotel management to shift focus from simpl
 | Presentation Slides_Annie Chooi.pdf | Project report and presentation slides |
 
 
+## Conclusion
+This project demonstrates how data analytics can support evidence-based decision-making in the hospitality industry. By analyzing booking behavior, customer value, occupancy patterns, and channel performance, hotel management can shift from reactive reporting to proactive revenue and operational optimization strategies.
