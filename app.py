@@ -29,9 +29,9 @@ st.title("🏨 Hotel Booking Cancellation Predictor")
 st.markdown("Predict whether an upcoming booking is likely to be cancelled.")
 
 # Input fields
-    st.subheader("Booking Details")
+st.subheader("Booking Details")
 
-    col1, col2 = st.columns(2)
+col1, col2 = st.columns(2)
 
 with col1:
     
