@@ -28,6 +28,18 @@ model = load_model()
 st.title("🏨 Hotel Booking Cancellation Predictor")
 st.markdown("Predict whether an upcoming booking is likely to be cancelled.")
 
+# --------------------------------------------------
+# TABS
+# --------------------------------------------------
+tab1, tab2 = st.tabs(
+    ["🔮 Prediction", "📊 Model Performance"]
+)
+
+# ==================================================
+# TAB 1 : PREDICTION
+# ==================================================
+with tab1:
+    
 # Input fields
 st.subheader("Booking Details")
 
@@ -122,6 +134,8 @@ if st.button("Predict Cancellation Risk"):
     )
 
     prediction = model.predict(input_df)
+
+    st.markdown("---")
     
     if prediction[0] == 1:
         st.error("⚠️ High Risk: This booking is likely to be cancelled.")
@@ -138,3 +152,40 @@ if st.button("Predict Cancellation Risk"):
             )
     except:
         st.info("Prediction probability is not available for this model.")
+
+
+# ==================================================
+# TAB 2 : MODEL PERFORMANCE
+# ==================================================
+with tab2:
+
+    st.subheader("Model Evaluation Metrics")
+
+    col1, col2, col3, col4, col5 = st.columns(5)
+
+    col1.metric("Accuracy", "78.44%")
+    col2.metric("Precision", "88.11%")
+    col3.metric("Recall", "48.33%")
+    col4.metric("F1 Score", "62.42%")
+    col5.metric("AUC-ROC", "86.30%")
+
+    st.markdown("---")
+
+    st.subheader("Performance Interpretation")
+
+    st.write("""
+    **Accuracy (78.44%)**
+    - 78.44% of all predictions are correct.
+
+    **Precision (88.11%)**
+    - When the model predicts a cancellation, it is correct 88.11% of the time.
+
+    **Recall (48.33%)**
+    - The model identifies 48.33% of actual cancellations.
+
+    **F1-Score (62.42%)**
+    - Indicates the balance between Precision and Recall.
+
+    **AUC-ROC (86.30%)**
+    - Demonstrates strong ability to distinguish cancelled and non-cancelled bookings.
+    """)
