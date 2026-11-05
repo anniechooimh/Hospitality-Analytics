@@ -91,27 +91,27 @@ if st.button("Predict Cancellation Risk"):
 
 # Build DataFrame using the same column names used during model training
 
-input_dict = {
-    "Lead_time": [lead_time],
-    "Total_nights": [total_nights],
-    "Customer_type": [customer_type],
-    "Market_segment": [market_segment],
-    "ADR": [adr],
-    "Deposit_type": [deposit_type]
-    }
+    input_dict = {
+        "Lead_time": [lead_time],
+        "Total_nights": [total_nights],
+        "Customer_type": [customer_type],
+        "Market_segment": [market_segment],
+        "ADR": [adr],
+        "Deposit_type": [deposit_type]
+        }
 
 # 2. Convert the dictionary into a pandas DataFrame
-input_df = pd.DataFrame(input_dict)
+    input_df = pd.DataFrame(input_dict)
 
 # 3. Pass the DataFrame to the model instead of the numpy array
-prediction = model.predict(input_df)
+    prediction = model.predict(input_df)
 
 st.markdown("---")
 
-if prediction[0] == 1:
-    st.error("⚠️ High Risk: This booking is likely to be cancelled.")
-else:
-    st.success("✅ Low Risk: This booking is likely to be honoured.")
+    if prediction[0] == 1:
+        st.error("⚠️ High Risk: This booking is likely to be cancelled.")
+    else:
+        st.success("✅ Low Risk: This booking is likely to be honoured.")
 
     # Probability (if available)
     try:
