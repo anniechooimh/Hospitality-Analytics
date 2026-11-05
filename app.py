@@ -41,9 +41,9 @@ tab1, tab2 = st.tabs(
 with tab1:
     
 # Input fields
-st.subheader("Booking Details")
+    st.subheader("Booking Details")
 
-col1, col2 = st.columns(2)
+    col1, col2 = st.columns(2)
 
 with col1:
     
