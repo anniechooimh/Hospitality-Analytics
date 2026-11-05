@@ -189,3 +189,14 @@ with tab2:
     **AUC-ROC (86.30%)**
     - Demonstrates strong ability to distinguish cancelled and non-cancelled bookings.
     """)
+
+    st.markdown("---")
+
+    st.subheader("Confusion Matrix")
+
+    st.image(
+        "https://github.com/anniechooimh/Hospitality-Analytics/blob/main/Confusion%20Matrix.png",
+        use_container_width=True
+    )
+
+
