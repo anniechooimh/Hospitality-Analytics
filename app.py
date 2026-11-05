@@ -101,10 +101,10 @@ if st.button("Predict Cancellation Risk"):
         }
 
 # 2. Convert the dictionary into a pandas DataFrame
-input_df = pd.DataFrame(input_dict)
+    input_df = pd.DataFrame(input_dict)
 
 # 3. Pass the DataFrame to the model instead of the numpy array
-prediction = model.predict(input_df)
+    prediction = model.predict(input_df)
 
 st.markdown("---")
 
