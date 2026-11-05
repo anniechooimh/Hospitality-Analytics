@@ -338,6 +338,7 @@ This recommendation framework enables hotel management to shift focus from simpl
 | bookings_clean.csv | Cleaned dataset produced using the notebook |
 | Hotel Booking Dashboard.pbix | Power BI dashboard |
 | Presentation Slides_Annie Chooi.pdf | Project report and presentation slides |
+|   | Streamlit App - Model Inference creation |
 
 
 ## Conclusion
