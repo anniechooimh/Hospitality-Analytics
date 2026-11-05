@@ -3,38 +3,107 @@ import joblib
 import numpy as np
 import pandas as pd
 
+# --------------------------------------------------
+# PAGE CONFIGURATION
+# --------------------------------------------------
+st.set_page_config(
+    page_title="Hotel Booking Cancellation Predictor",
+    page_icon="🏨",
+    layout="wide"
+)
+
+# -------------------------------------------------
 # Load the saved sales regression model
+# -------------------------------------------------
 @st.cache_resource
 def load_model():
     return joblib.load('salesregression.pkl')
 
 model = load_model()
 
-st.title("🤖 Booking Cancellation ML Predictor")
+
+# --------------------------------------------------
+# TITLE
+# --------------------------------------------------
+st.title("🏨 Hotel Booking Cancellation Predictor")
+st.markdown("Predict whether an upcoming booking is likely to be cancelled.")
 
 # Input fields
-val1 = st.number_input("Lead_time", value=90)
-val2 = st.number_input("Total_nights", value=3)
-val3 = st.text_input("Customer_type", value='Group')
-val4 = st.text_input("Market_segment", value='Online TA')
-val5 = st.number_input("ADR", value=100)
-val6 = st.text_input("Deposit_type", value='Non Refund')
+st.subheader("Booking Details")
 
-if st.button("Predict"):
-    # 1. Arrange inputs into a dictionary mapping to your exact original dataset column names
+col1, col2 = st.columns(2)
+
+with col1:
+    
+    lead_time = st.number_input(
+        "Lead Time",
+        min_value=0,
+        max_value=800,
+        value=90
+    )
+
+    total_nights = st.number_input(
+        "Total Nights",
+        min_value=1,
+        max_value=30,
+        value=3
+    )
+
+    adr = st.number_input(
+        "ADR",
+        min_value=0.0,
+        value=100.0
+    )
+
+with col2:
+    
+    customer_type = st.selectbox(
+        "Customer Type",
+        [
+            "Transient",
+            "Transient-Party",
+            "Contract",
+            "Group"
+        ]
+    )
+
+    market_segment = st.selectbox(
+        "Market Segment",
+        [
+            "Online TA",
+            "Offline TA/TO",
+            "Direct",
+            "Corporate",
+            "Groups"
+        ]
+    )
+
+    deposit_type = st.selectbox(
+        "Deposit Type",
+        [
+            "No Deposit",
+            "Non Refund",
+            "Refundable"
+        ]
+    )
+
+if st.button("Predict Cancellation Risk"):
+
+# Build DataFrame using the same column names used during model training
+
     input_dict = {
-        "Lead_time": [val1],
-        "Total_nights": [val2],
-        "Customer_type": [val3],
-        "Market_segment": [val4],
-        "ADR": [val5],
-        "Deposit_type": [val6]
-    }
+        "Lead_time": [lead_time],
+        "Total_nights": [total_nights],
+        "Customer_type": [customer_type],
+        "Market_segment": [market_segment],
+        "ADR": [adr],
+        "Deposit_type": [deposit_type]
+        }
 
-    # 2. Convert the dictionary into a pandas DataFrame
-    input_df = pd.DataFrame(input_dict)
+# 2. Convert the dictionary into a pandas DataFrame
+input_df = pd.DataFrame(input_dict)
 
-    # 3. Pass the DataFrame to the model instead of the numpy array
-    prediction = model.predict(input_df)
+# 3. Pass the DataFrame to the model instead of the numpy array
+prediction = model.predict(input_df)
 
-    st.success(f"Prediction: {prediction[0]}")
+st.success(f"Prediction: {prediction[0]}")
