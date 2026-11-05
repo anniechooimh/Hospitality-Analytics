@@ -105,9 +105,7 @@ if st.button("Predict Cancellation Risk"):
 
 # 3. Pass the DataFrame to the model instead of the numpy array
     prediction = model.predict(input_df)
-
-st.markdown("---")
-
+    
     if prediction[0] == 1:
         st.error("⚠️ High Risk: This booking is likely to be cancelled.")
     else:
