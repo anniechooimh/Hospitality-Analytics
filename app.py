@@ -109,26 +109,19 @@ prediction = model.predict(input_df)
 st.markdown("---")
 
 if prediction[0] == 1:
-    st.error(
-        "⚠️ High Risk: This booking is likely to be cancelled."
-        )
-    else:
-        st.success(
-            "✅ Low Risk: This booking is likely to be honoured."
+    st.error("⚠️ High Risk: This booking is likely to be cancelled.")
+else:
+    st.success("✅ Low Risk: This booking is likely to be honoured.")
+
+    # Probability (if available)
+    try:
+        probability = model.predict_proba(input_df)[0][1]
+
+        st.metric(
+            "Cancellation Probability",
+            f"{probability:.2%}"
             )
-
-        # Probability (if available)
-        try:
-
-            probability = model.predict_proba(input_df)[0][1]
-
-            st.metric(
-                "Cancellation Probability",
-                f"{probability:.2%}"
-            )
-
         except:
-
             st.info(
                 "Prediction probability is not available for this model."
-            )
+                )
