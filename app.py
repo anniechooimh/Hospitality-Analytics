@@ -42,17 +42,17 @@ with col1:
         value=90
     )
 
+    adr = st.number_input(
+        "ADR",
+        min_value=0.0,
+        value=100.0
+    )
+    
     total_nights = st.number_input(
         "Total Nights",
         min_value=1,
         max_value=30,
         value=3
-    )
-
-    adr = st.number_input(
-        "ADR",
-        min_value=0.0,
-        value=100.0
     )
 
 with col2:
