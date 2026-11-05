@@ -106,4 +106,29 @@ input_df = pd.DataFrame(input_dict)
 # 3. Pass the DataFrame to the model instead of the numpy array
 prediction = model.predict(input_df)
 
-st.success(f"Prediction: {prediction[0]}")
+st.markdown("---")
+
+if prediction[0] == 1:
+    st.error(
+        "⚠️ High Risk: This booking is likely to be cancelled."
+        )
+    else:
+        st.success(
+            "✅ Low Risk: This booking is likely to be honoured."
+            )
+
+        # Probability (if available)
+        try:
+
+            probability = model.predict_proba(input_df)[0][1]
+
+            st.metric(
+                "Cancellation Probability",
+                f"{probability:.2%}"
+            )
+
+        except:
+
+            st.info(
+                "Prediction probability is not available for this model."
+            )
