@@ -103,6 +103,12 @@ if st.button("Predict Cancellation Risk"):
 # 2. Convert the dictionary into a pandas DataFrame
     input_df = pd.DataFrame(input_dict)
 
+st.write("Input DataFrame")
+st.write(input_df)
+
+st.write("Input Columns")
+st.write(input_df.columns.tolist())
+
 # 3. Pass the DataFrame to the model instead of the numpy array
     prediction = model.predict(input_df)
     
